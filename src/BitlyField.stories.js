@@ -7,5 +7,11 @@ export default {
 };
 
 export const BitlyField = () => (
-  <BitlyFieldComponent />
+  <BitlyFieldComponent
+    config={{
+      accessToken: '',
+    }}
+    onSuccess={(response) => console.log(response)}
+    onError={(error) => console.log(error)}
+  />
 );
