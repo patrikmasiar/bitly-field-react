@@ -9,9 +9,15 @@
   border: 1px solid #b64918;
   z-index: 2;
   border-radius: 0 3px 3px 0;
+  user-select: none;
+  min-width: 100px;
   // background: #182f40;
 
   &:hover {
     background-color: #b64918;
   }
+}
+
+.buttonDisabled {
+  pointer-events: none;
 }

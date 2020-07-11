@@ -6,18 +6,25 @@ import style from './SubmitButton.module.scss';
 const SubmitButton = ({
   onClick,
   className,
+  isLoading,
 }) => (
   <button
     type='button'
     onClick={onClick}
-    className={classes(style.button, className)}
+    className={classes(
+      style.button,
+      isLoading && style.buttonDisabled,
+      className,
+    )}
+    disabled={isLoading}
   >
-    Generate
+    {isLoading ? 'Loading...' : 'Generate'}
   </button>
 );
 
 SubmitButton.propTypes = {
   onClick: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
   className: PropTypes.string,
 };
 

@@ -8,18 +8,22 @@ const Input = ({
   value,
   placeholder,
   className,
+  isDisabled,
 }) => (
   <input
     onChange={(e) => onChange(e.target.value)}
     value={value}
     className={classes(style.input, className)}
     placeholder={placeholder}
+    readOnly={isDisabled}
+    disabled={isDisabled}
   />
 );
 
 Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
+  isDisabled: PropTypes.bool.isRequired,
   className: PropTypes.string,
   placeholder: PropTypes.string,
 };

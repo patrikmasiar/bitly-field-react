@@ -7,10 +7,14 @@ import style from './FieldWrapper.module.scss';
 const FieldWrapper = ({
   placeholder,
   inputClassName,
-  onSubmit,
   buttonClassName,
 }) => {
   const [value, setValue] = useState('');
+  const [isLoading, setLoading] = useState(false);
+
+  const handleSubmitLink = () => {
+    setLoading(true);
+  };
 
   return (
     <div
@@ -21,10 +25,12 @@ const FieldWrapper = ({
         onChange={(linkValue) => setValue(linkValue)}
         className={inputClassName}
         placeholder={placeholder}
+        isDisabled={isLoading}
       />
       <SubmitButton
-        onClick={onSubmit}
+        onClick={handleSubmitLink}
         className={buttonClassName}
+        isLoading={isLoading}
       />
     </div>
   );
@@ -33,7 +39,6 @@ const FieldWrapper = ({
 FieldWrapper.propTypes = {
   placeholder: PropTypes.string,
   inputClassName: PropTypes.string,
-  onSubmit: PropTypes.func.isRequired,
   buttonClassName: PropTypes.string,
 };
 
