@@ -6,6 +6,8 @@ ReactJS component to create and get shorter URL via Bitly.
 ## Install
 `npm install bitly-field-react`
 
+**NPM:** [npmjs.com/package/bitly-field-react](https://www.npmjs.com/package/bitly-field-react)
+
 ## Usage
 ```javascript
 import BitlyField from 'bitly-field-react';
