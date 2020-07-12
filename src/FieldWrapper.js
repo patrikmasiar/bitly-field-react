@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import classes from 'react-style-classes';
 import Input from './Input';
 import SubmitButton from './SubmitButton';
@@ -27,27 +26,32 @@ const FieldWrapper = ({
   const handleSubmitLink = async () => {
     setLoading(true);
 
-    axios.defaults.headers = {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${accessToken}`,
-    };
-
-    await axios.post('https://api-ssl.bitly.com/v4/bitlinks', {
-      long_url: value,
-      domain,
-      title,
-      group_guid: groupGuid,
-      tags,
-      deeplinks,
+    fetch('https://api-ssl.bitly.com/v4/bitlinks', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify({
+        long_url: value,
+        domain,
+        title,
+        group_guid: groupGuid,
+        tags,
+        deeplinks,
+      }),
     })
-      .then((response) => {
-        onSuccess(response.data);
-      })
-      .catch((error) => {
-        onError(error);
-      });
-
-    setLoading(false);
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          onSuccess(result);
+          setLoading(false);
+        },
+        (error) => {
+          onError(error);
+          setLoading(false);
+        },
+      );
   };
 
   return (
