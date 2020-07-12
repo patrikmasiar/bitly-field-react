@@ -9,7 +9,7 @@ export default {
 export const BitlyField = () => (
   <BitlyFieldComponent
     config={{
-      accessToken: ',
+      accessToken: '',
     }}
     onSuccess={(response) => console.log(response)}
   />
