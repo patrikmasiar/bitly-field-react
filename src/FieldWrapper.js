@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import Input from './Input';
 import SubmitButton from './SubmitButton';
-import style from './FieldWrapper.module.scss';
+import style from './FieldWrapper.module.css';
 
 const FieldWrapper = ({
   placeholder,

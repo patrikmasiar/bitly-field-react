@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classes from 'react-style-classes';
-import style from './Input.module.scss';
+import style from './Input.module.css';
 
 const Input = ({
   onChange,

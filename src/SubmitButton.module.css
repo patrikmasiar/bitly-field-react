@@ -11,10 +11,10 @@
   border-radius: 0 3px 3px 0;
   user-select: none;
   min-width: 100px;
+}
 
-  &:hover {
-    background-color: #b64918;
-  }
+.button:hover {
+  background-color: #b64918;
 }
 
 .buttonDisabled {
