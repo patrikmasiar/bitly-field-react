@@ -1,7 +1,9 @@
 .wrapper {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid #aaa;
   border-radius: 4px;
   overflow: hidden;
+  width: 100%;
 }
