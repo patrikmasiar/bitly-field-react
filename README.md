@@ -6,6 +6,9 @@
 # Bitly field ReactJS
 ReactJS component to create and get shorter URL via Bitly.
 
+### Storybook 📒
+[bitlyfield.masso.sk](http://bitlyfield.masso.sk/?path=/story/bitlyfield--bitly-field)
+
 ## Install
 `npm install bitly-field-react`
 
