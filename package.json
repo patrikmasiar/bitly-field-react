@@ -24,9 +24,6 @@
   "bugs": {
     "url": "https://github.com/massoprod/bitly-field-react/issues"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "dependencies": {
     "react-scripts": "3.4.0",
     "react-style-classes": "^2.0.2",
