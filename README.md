@@ -19,7 +19,12 @@ import BitlyField from 'bitly-field-react';
 
 <BitlyField
   config={{
-      accessToken: {YOUR_BITLY_ACCESS_TOKEN},
+    accessToken: {YOUR_BITLY_ACCESS_TOKEN}, // REQUIRED
+    domain: null, // String (optional)
+    title: null, // String (optional)
+    group_guid: null, // String (optional)
+    tags: [] // Array of strings (optional)
+    deeplinks: [], // Array of object (optional)
   }}
   onSuccess={(response) => callback(response)}
   onError={(error) => callback(error)}
@@ -29,9 +34,17 @@ import BitlyField from 'bitly-field-react';
 ```
 
 ## Docs
+#### Bitly API documentation
+[dev.bitly.com/v4](https://dev.bitly.com/v4_documentation.html)
+
 ```javascript
 config: {
-  accessToken: {YOUR_BITLY_ACCESS_TOKEN}
+  accessToken: {YOUR_BITLY_ACCESS_TOKEN} // REQUIRED
+  domain: null, // String (optional)
+  title: null, // String (optional)
+  group_guid: null, // String (optional)
+  tags: [] // Array of strings (optional)
+  deeplinks: [], // Array of object (optional)
 }
 
 onSuccess => response = {
@@ -56,3 +69,4 @@ onSuccess => response = {
 |placeholder|String|null|
 |inputClassName|String|null|
 |buttonClassName|String|null|
+|className|String|null|
