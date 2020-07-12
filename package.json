@@ -1,6 +1,6 @@
 {
   "name": "bitly-field-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Patrik Mäsiar",
   "description": "ReactJS component to create and get shorter URL via Bitly.",
   "private": false,
