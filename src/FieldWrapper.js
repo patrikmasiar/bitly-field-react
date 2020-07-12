@@ -14,6 +14,11 @@ const FieldWrapper = ({
   accessToken,
   onSuccess,
   onError,
+  domain,
+  title,
+  groupGuid,
+  tags,
+  deeplinks,
 }) => {
   const [value, setValue] = useState('');
   const [isLoading, setLoading] = useState(false);
@@ -28,6 +33,11 @@ const FieldWrapper = ({
 
     await axios.post('https://api-ssl.bitly.com/v4/bitlinks', {
       long_url: value,
+      domain,
+      title,
+      group_guid: groupGuid,
+      tags,
+      deeplinks,
     })
       .then((response) => {
         onSuccess(response.data);
@@ -67,6 +77,11 @@ FieldWrapper.propTypes = {
   inputClassName: PropTypes.string,
   buttonClassName: PropTypes.string,
   className: PropTypes.string,
+  domain: PropTypes.string,
+  title: PropTypes.string,
+  groupGuid: PropTypes.string,
+  tags: PropTypes.array,
+  deeplinks: PropTypes.array,
 };
 
 FieldWrapper.defaultProps = {
@@ -74,6 +89,11 @@ FieldWrapper.defaultProps = {
   inputClassName: null,
   buttonClassName: null,
   className: null,
+  domain: null,
+  title: null,
+  groupGuid: null,
+  tags: [],
+  deeplinks: [],
   onError: () => null,
 };
 

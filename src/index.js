@@ -17,6 +17,11 @@ const BitlyField = ({
     inputClassName={inputClassName}
     buttonClassName={buttonClassName}
     accessToken={config.accessToken}
+    domain={config.domain ? config.domain : null}
+    title={config.title ? config.title : null}
+    groupGuid={config.group_guid ? config.group_guid : null}
+    tags={config.tags ? config.tags : []}
+    deeplinks={config.deeplinks ? config.deeplinks : []}
     onSuccess={onSuccess}
     onError={onError}
   />
