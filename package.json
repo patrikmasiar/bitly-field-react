@@ -1,6 +1,6 @@
 {
   "name": "bitly-field-react",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Patrik Mäsiar",
   "description": "ReactJS component to create and get shorter URL via Bitly.",
   "private": false,
@@ -25,11 +25,11 @@
     "url": "https://github.com/massoprod/bitly-field-react/issues"
   },
   "dependencies": {
-    "react-scripts": "3.4.0",
     "react-style-classes": "^2.0.2"
   },
   "peerDependencies": {
     "react": "^16.12.0",
+    "react-scripts": "3.4.0",
     "react-dom": "^16.12.0"
   },
   "scripts": {
@@ -73,7 +73,6 @@
     "babel-jest": "^25.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "file-loader": "^5.1.0",
     "jest": "^25.1.0",
     "jest-css-modules-transform": "^4.0.0",
     "node-sass": "^4.14.1",
