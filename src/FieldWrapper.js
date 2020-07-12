@@ -21,6 +21,7 @@ const FieldWrapper = ({
   deeplinks,
 }) => {
   const [value, setValue] = useState('');
+  const [isFocused, setFocued] = useState(false);
   const [isLoading, setLoading] = useState(false);
 
   const handleSubmitLink = async () => {
@@ -51,7 +52,11 @@ const FieldWrapper = ({
 
   return (
     <div
-      className={classes(style.wrapper, className)}
+      className={classes(
+        style.wrapper,
+        isFocused && style.focused,
+        className,
+      )}
     >
       <Input
         value={value}
@@ -59,6 +64,8 @@ const FieldWrapper = ({
         className={inputClassName}
         placeholder={placeholder}
         isDisabled={isLoading}
+        onFocus={() => setFocued(true)}
+        onBlur={() => setFocued(false)}
       />
       <SubmitButton
         onClick={handleSubmitLink}

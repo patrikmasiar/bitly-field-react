@@ -9,6 +9,8 @@ const Input = ({
   placeholder,
   className,
   isDisabled,
+  onFocus,
+  onBlur,
 }) => (
   <input
     onChange={(e) => onChange(e.target.value)}
@@ -17,6 +19,8 @@ const Input = ({
     placeholder={placeholder}
     readOnly={isDisabled}
     disabled={isDisabled}
+    onFocus={onFocus}
+    onBlur={onBlur}
   />
 );
 
@@ -24,6 +28,8 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   isDisabled: PropTypes.bool.isRequired,
+  onFocus: PropTypes.func.isRequired,
+  onBlur: PropTypes.func,
   className: PropTypes.string,
   placeholder: PropTypes.string,
 };
