@@ -3,7 +3,7 @@ import BitlyFieldComponent from './index';
 
 export default {
   title: 'BitlyField',
-  // component: ActivityIndicator,
+  component: BitlyFieldComponent,
 };
 
 export const BitlyField = () => (
