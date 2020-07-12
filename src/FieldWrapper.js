@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import classes from 'react-style-classes';
 import Input from './Input';
 import SubmitButton from './SubmitButton';
 import style from './FieldWrapper.module.css';
@@ -9,6 +10,7 @@ const FieldWrapper = ({
   placeholder,
   inputClassName,
   buttonClassName,
+  className,
   accessToken,
   onSuccess,
   onError,
@@ -39,7 +41,7 @@ const FieldWrapper = ({
 
   return (
     <div
-      className={style.wrapper}
+      className={classes(style.wrapper, className)}
     >
       <Input
         value={value}
@@ -64,12 +66,14 @@ FieldWrapper.propTypes = {
   placeholder: PropTypes.string,
   inputClassName: PropTypes.string,
   buttonClassName: PropTypes.string,
+  className: PropTypes.string,
 };
 
 FieldWrapper.defaultProps = {
   placeholder: null,
   inputClassName: null,
   buttonClassName: null,
+  className: null,
   onError: () => null,
 };
 

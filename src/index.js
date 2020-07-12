@@ -9,9 +9,11 @@ const BitlyField = ({
   config,
   onSuccess,
   onError,
+  className,
 }) => (
   <FieldWrapper
     placeholder={placeholder}
+    className={className}
     inputClassName={inputClassName}
     buttonClassName={buttonClassName}
     accessToken={config.accessToken}
@@ -23,6 +25,7 @@ const BitlyField = ({
 BitlyField.propTypes = {
   config: PropTypes.object.isRequired,
   onSuccess: PropTypes.func.isRequired,
+  className: PropTypes.string,
   onError: PropTypes.func,
   placeholder: PropTypes.string,
   inputClassName: PropTypes.string,
@@ -33,6 +36,7 @@ BitlyField.defaultProps = {
   placeholder: 'Add link ...',
   inputClassName: null,
   buttonClassName: null,
+  className: null,
   onError: () => null,
 };
 
