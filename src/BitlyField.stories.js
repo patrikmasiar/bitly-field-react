@@ -9,9 +9,8 @@ export default {
 export const BitlyField = () => (
   <BitlyFieldComponent
     config={{
-      accessToken: '',
+      accessToken: '29b82e22c04d51b9609d55f6ed8412d62c0cb9f2',
     }}
     onSuccess={(response) => console.log(response)}
-    onError={(error) => console.log(error)}
   />
 );
