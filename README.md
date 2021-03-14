@@ -5,9 +5,6 @@
 # Bitly field ReactJS
 ReactJS component to create and get shorter URL via Bitly.
 
-### Storybook 📒
-[bitlyfield.masso.sk](http://bitlyfield.masso.sk/?path=/story/bitlyfield--bitly-field)
-
 ## Install
 `npm install bitly-field-react`
 
@@ -31,8 +28,37 @@ import BitlyField from 'bitly-field-react';
   onSuccess={(response) => callback(response)}
   onError={(error) => callback(error)}
 />
-
 ...
+```
+
+## Types
+```javascript
+SuccessResponse {
+  id: string;
+  link: string;
+  long_url: string;
+  deeplinks: any[];
+  custom_bitlinks: any[];
+  created_at: string;
+  archived: boolean;
+  tags: any[];
+  references: any;
+};
+
+config: {
+  accessToken: string;
+  domain?: string | null;
+  title?: string | null;
+  group_guid?: string | null;
+  tags?: string[];
+  deeplinks?: any[];
+};
+onSuccess: (response: SuccessResponse) => void;
+onError?: (error: any) => void;
+className?: string | null;
+placeholder?: string;
+inputClassName?: string | null;
+buttonClassName?: string | null;
 ```
 
 ## Docs
