@@ -1,4 +1,4 @@
-![Bitly URL shortener field](https://docrdsfx76ssb.cloudfront.net/static/1594322618/pages/wp-content/uploads/2019/02/bitly.png)
+![Bitly URL shortener field](https://www.vhv.rs/dpng/d/216-2168778_bitly-logo-bit-bitly-icon-hd-png-download.png)
 
 [![npm](https://img.shields.io/npm/v/bitly-field-react?style=plastic)](https://www.npmjs.com/package/bitly-field-react)
 [![NPM](https://img.shields.io/npm/l/bitly-field-react)](https://github.com/massoprod/bitly-field-react/blob/master/LICENSE)
