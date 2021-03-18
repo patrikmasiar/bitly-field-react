@@ -1,6 +1,6 @@
 {
   "name": "bitly-field-react",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Patrik Mäsiar",
   "description": "ReactJS component to create and get shorter URL via Bitly.",
   "private": false,
@@ -20,10 +20,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/massoprod/bitly-field-react.git"
+    "url": "git+https://github.com/patrikmasiar/bitly-field-react.git"
   },
   "bugs": {
-    "url": "https://github.com/massoprod/bitly-field-react/issues"
+    "url": "https://github.com/patrikmasiar/bitly-field-react/issues"
   },
   "dependencies": {
     "react-style-classes": "^2.0.2"

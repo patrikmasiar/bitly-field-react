@@ -1,5 +1,5 @@
 [![npm](https://img.shields.io/npm/v/bitly-field-react?style=plastic)](https://www.npmjs.com/package/bitly-field-react)
-[![NPM](https://img.shields.io/npm/l/bitly-field-react)](https://github.com/massoprod/bitly-field-react/blob/master/LICENSE)
+[![NPM](https://img.shields.io/npm/l/bitly-field-react)](https://github.com/patrikmasiar/bitly-field-react/blob/master/LICENSE)
 [![NPM](https://img.shields.io/npm/dy/bitly-field-react?style=plastic)](https://www.npmjs.com/package/bitly-field-react)
 
 # Bitly field ReactJS
